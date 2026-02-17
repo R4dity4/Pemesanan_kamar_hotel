@@ -2,7 +2,9 @@
     <div class="container footer-inner">
         <div class="footer-col">
             <h4>HOTEL<span style="color:var(--accent)">X</span></h4>
-            <p>Jl. Bukit Watuwila VI No.26<br> Bringin, Kec. Ngaliyan<br> Kota Semarang, Jawa Tengah 50189</p>
+                    Jl. Nasional 14 No.10, Karangkidul<br>
+                    Kec. Semarang Tengah<br>
+                    Kota Semarang, Jawa Tengah 50136
             <p style="margin-top:16px">
                 <strong style="color:var(--accent)">Reservasi:</strong><br>
                 +62 00 2606 2007

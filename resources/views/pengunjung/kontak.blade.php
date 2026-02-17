@@ -14,22 +14,14 @@
         <!-- Kiri: Peta -->
         <div>
             <div class="info-card" style="height:auto; padding:0; overflow:hidden">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.50494885754588!2d110.33241430080955!3d-6.99995732984799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708a9ff4d0bc05%3A0x1321bfcfee0330e9!2sJl.%20Bukit%20Watuwila%20VI%20No.26%2C%20Bringin%2C%20Kec.%20Ngaliyan%2C%20Kota%20Semarang%2C%20Jawa%20Tengah%2050189!5e0!3m2!1sid!2sid!4v1768148107711!5m2!1sid!2sid"
-                    width="100%"
-                    height="350"
-                    style="border:0; display:block"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11689.59693002208!2d110.42587544717635!3d-6.993250668199921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b59293bdfe5%3A0x684ecd8ad245383a!2sLapangan%20Pancasila%20Simpang%20Lima%20Semarang!5e0!3m2!1sid!2sid!4v1771362010014!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="info-card" style="height:auto; margin-top:24px">
                 <h4><x-lucide-map-pin class="lucide-icon-inline" /> Alamat</h4>
                 <p style="line-height:1.8; color:#666">
-                    Jl. Bukit Watuwila VI No.26<br>
-                    Bringin, Kec. Ngaliyan<br>
-                    Kota Semarang, Jawa Tengah 50189
+                    Jl. Nasional 14 No.10, Karangkidul<br>
+                    Kec. Semarang Tengah<br>
+                    Kota Semarang, Jawa Tengah 50136
                 </p>
             </div>
         </div>
