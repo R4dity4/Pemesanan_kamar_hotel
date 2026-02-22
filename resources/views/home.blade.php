@@ -17,7 +17,7 @@
                 <span class="hero-subtitle">Selamat Datang di</span>
                 <h1>HOTEL<span class="text-accent">X</span></h1>
                 <p>Nikmati penginapan mewah dengan layanan terbaik, desain elegan, dan pengalaman lokal yang tak terlupakan.</p>
-                <a href="{{ route('reservasi') }}" class="btn-reserve" style="margin-top:24px; text-decoration: none;">Reservasi Sekarang</a>
+                {{-- <a href="{{ route('reservasi') }}" class="btn-reserve" style="margin-top:24px; text-decoration: none;">Reservasi Sekarang</a> --}}
             </div>
         </div>
         <div class="hero-slide" style="background-image:url('{{ asset('images/hotel2.jpg') }}')">
@@ -26,7 +26,7 @@
                 <span class="hero-subtitle">Pengalaman Menginap</span>
                 <h1>Kenyamanan Modern</h1>
                 <p>Kamar dengan fasilitas lengkap, area santai, dan akses mudah ke atraksi utama kota.</p>
-                <a href="{{ route('kamar') }}" class="btn-reserve" style="margin-top:24px; text-decoration: none;">Lihat Kamar</a>
+                {{-- <a href="{{ route('kamar') }}" class="btn-reserve" style="margin-top:24px; text-decoration: none;">Lihat Kamar</a> --}}
             </div>
         </div>
         <div class="hero-slide" style="background-image:url('{{ asset('images/hotel3.jpg') }}')">
@@ -35,7 +35,7 @@
                 <span class="hero-subtitle">Momen Berharga</span>
                 <h1>Tak Terlupakan</h1>
                 <p>Ciptakan momen berharga bersama keluarga dan orang tersayang di destinasi impian Anda.</p>
-                <a href="{{ route('fasilitas') }}" class="btn-reserve" style="margin-top:24px; text-decoration: none;">Jelajahi Fasilitas</a>
+                {{-- <a href="{{ route('fasilitas') }}" class="btn-reserve" style="margin-top:24px; text-decoration: none;">Jelajahi Fasilitas</a> --}}
             </div>
         </div>
     </div>
