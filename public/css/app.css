@@ -696,6 +696,13 @@ h1, h2, h3, h4, h5, h6 {
     .footer-inner {
         grid-template-columns: 1fr;
         gap: 40px;
+        text-align: center;
+    }
+
+    .footer-col ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .slide {
@@ -2892,6 +2899,7 @@ select.form-control {
     background: var(--dark);
     padding: 0 24px;
     padding-top: 80px;
+    padding-bottom: 24px;
     border-top: 1px solid rgba(255,255,255,0.06);
 }
 
@@ -3434,6 +3442,184 @@ select.form-control {
 .back-to-top svg {
     width: 18px;
     height: 18px;
+}
+
+/* ===== COMPREHENSIVE MOBILE RESPONSIVE ===== */
+
+/* --- Kontak page iframe fix --- */
+.kontak-grid iframe {
+    width: 100%;
+    height: 350px;
+    display: block;
+}
+
+/* --- Room detail: Kamar Lainnya grid --- */
+.kamar-lain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* --- Room detail: layanan grid --- */
+.layanan-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* --- Transaksi show: 2-column grid --- */
+.detail-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* --- Info table responsive stack on mobile --- */
+@media (max-width: 600px) {
+    .kontak-grid iframe {
+        height: 280px;
+    }
+
+    .kamar-lain-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .layanan-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cek status tables on mobile: make scrollable */
+    .cek-status-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cek-status-table table {
+        min-width: 480px;
+    }
+
+    /* Stacked total harga on mobile */
+    .total-harga-row {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start !important;
+    }
+
+    /* Price panel on smallest screens */
+    .price-panel {
+        padding: 16px;
+    }
+
+    .price-total-value {
+        font-size: 20px;
+    }
+
+    /* Section sep long text */
+    .section-sep {
+        padding: 80px 16px 30px;
+    }
+
+    .section-sep p {
+        font-size: 13px;
+        padding: 0 8px;
+    }
+
+    /* Back-to-top smaller */
+    .back-to-top {
+        bottom: 20px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .kamar-lain-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .kamar-lain-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Breadcrumb smaller padding */
+    .breadcrumb-bar {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Step progress compact */
+    .step-progress {
+        padding: 16px 8px 16px;
+        margin-bottom: 16px;
+    }
+
+    .step-item { width: 60px; }
+    .step-circle { width: 30px; height: 30px; font-size: 11px; }
+    .step-label { font-size: 8px; margin-top: 6px; }
+    .step-connector { margin-bottom: 18px; }
+
+    /* Form title smaller */
+    .form-title {
+        font-size: 14px;
+    }
+
+    /* Price panel compact */
+    .price-panel-title {
+        font-size: 14px;
+    }
+
+    .price-line {
+        font-size: 12px;
+    }
+
+    /* Toast full width on very small */
+    .toast-container {
+        left: 8px;
+        right: 8px;
+        top: 8px;
+    }
+
+    .toast {
+        min-width: auto;
+        max-width: 100%;
+        padding: 12px 14px;
+    }
+
+    /* Room hero compact */
+    .room-hero {
+        height: 35vh;
+        min-height: 250px;
+    }
+
+    .room-hero-content h1 {
+        font-size: 22px;
+    }
+
+    .room-hero-content p {
+        font-size: 13px;
+    }
+
+    .room-hero-content .back-link {
+        font-size: 12px;
+    }
+
+    /* Room price on mobile */
+    .room-price {
+        font-size: 20px;
+    }
+
+    .room-price small {
+        font-size: 13px;
+    }
 }
 
 /* ===== SKELETON LOADING ===== */

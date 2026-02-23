@@ -100,7 +100,7 @@
             <!-- Layanan Tambahan -->
             <div class="info-card" style="height:auto">
                 <h4>Layanan Tambahan</h4>
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px">
+                <div class="layanan-detail-grid">
                     @php
                         $layananBase = ['Room Service 24 Jam', 'Laundry Express', 'Wake-up Call'];
                         $layananDeluxe = array_merge($layananBase, ['Antar-Jemput Bandara', 'Late Check-out']);
@@ -150,7 +150,7 @@
 <section style="background:var(--bg); padding:60px 0">
     <div class="container">
         <h3 style="text-align:center; margin-bottom:32px">Kamar Lainnya</h3>
-        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px">
+        <div class="kamar-lain-grid">
             @foreach($kamarLain as $km)
             @php
                 $kmImg = $km->gambar ? asset('storage/' . $km->gambar) : ($roomImages[$km->jenis_kamar] ?? $roomImages['Standard']);

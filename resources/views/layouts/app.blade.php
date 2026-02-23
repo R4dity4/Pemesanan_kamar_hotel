@@ -77,7 +77,7 @@
     <script>
     // Toast Notification System
     window.Toast = {
-        show(type, title, message, duration = 4000) {
+        show(type, title, message, duration = 7000) {
             const container = document.getElementById('toastContainer');
             const toast = document.createElement('div');
             toast.className = `toast toast-${type}`;

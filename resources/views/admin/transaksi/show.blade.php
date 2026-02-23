@@ -3,7 +3,7 @@
 @section('title', 'Detail Transaksi')
 
 @section('content')
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:24px">
+<div class="admin-detail-grid">
     <div class="card">
         <h3 class="card-title">Transaksi #{{ $transaksi->no_transaksi }}</h3>
         <table style="margin-top:16px">

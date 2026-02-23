@@ -263,6 +263,18 @@ function togglePeriodInputs() {
     .stats-grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
 
+@media (max-width: 480px) {
+    .stats-grid-4 { grid-template-columns: 1fr; gap: 10px; }
+    .stat-mini { padding: 12px 14px; }
+    .stat-mini .stat-number { font-size: 18px; }
+    .status-item { min-width: 60px; padding: 10px 8px; }
+    .status-item .status-count { font-size: 18px; }
+    .filter-row { flex-direction: column; }
+    .filter-group .form-control { min-width: unset; width: 100%; }
+    .filter-actions { width: 100%; }
+    .filter-actions .btn { flex: 1; }
+}
+
 .stat-mini {
     background: #fff;
     border-radius: 8px;

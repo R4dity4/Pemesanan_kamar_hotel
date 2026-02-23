@@ -138,6 +138,41 @@
     .stats-grid-3 { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 480px) {
+    .pesan-item {
+        flex-direction: column;
+        padding: 12px 14px;
+    }
+    .pesan-indicator { display: none; }
+    .pesan-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .pesan-meta {
+        flex-wrap: wrap;
+    }
+    .pesan-actions {
+        width: 100%;
+    }
+    .pesan-actions .btn {
+        flex: 1;
+        text-align: center;
+    }
+    .filter-row {
+        flex-direction: column;
+    }
+    .filter-group .form-control {
+        min-width: unset;
+        width: 100%;
+    }
+    .filter-actions {
+        width: 100%;
+    }
+    .filter-actions .btn {
+        flex: 1;
+    }
+}
+
 .stat-mini {
     background: #fff;
     border-radius: 8px;

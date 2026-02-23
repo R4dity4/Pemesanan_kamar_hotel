@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\KamarAdminController;
 use App\Http\Controllers\Admin\TransaksiAdminController;
 use App\Http\Controllers\Admin\PesanAdminController;
 use App\Http\Controllers\Admin\LaporanController;
+use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Api\AvailabilityController;
 
 // ==========================================
@@ -97,4 +98,7 @@ Route::middleware(['karyawan'])->prefix('admin')->group(function () {
     // Laporan
     Route::get('/laporan', [LaporanController::class, 'index'])->name('admin.laporan.index');
     Route::get('/laporan/download', [LaporanController::class, 'download'])->name('admin.laporan.download');
+
+    // Notifikasi real-time (polling)
+    Route::get('/notifications/check', [NotificationController::class, 'check'])->name('admin.notifications.check');
 });

@@ -336,6 +336,47 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }
 
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .stat-card {
+        padding: 16px;
+        gap: 12px;
+    }
+    .stat-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+    }
+    .stat-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    .stat-info .value {
+        font-size: 22px;
+    }
+    .revenue-amount {
+        font-size: 24px;
+    }
+    .chart-card .chart-container {
+        height: 200px;
+    }
+    .room-type-card {
+        padding: 14px 20px;
+        min-width: 90px;
+    }
+    .room-type-count {
+        font-size: 24px;
+    }
+    .checkin-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
 .stat-card {
     background: #fff;
     padding: 24px;

@@ -133,6 +133,7 @@
         <!-- Kamar yang Dipesan -->
         <div class="info-card" style="margin-top:24px; height:auto">
             <h4><x-lucide-bed-double class="lucide-icon-inline" /> Kamar yang Dipesan</h4>
+            <div class="cek-status-table">
             <table style="width:100%; margin-top:16px; border-collapse:collapse">
                 <thead>
                     <tr style="background:var(--bg)">
@@ -161,12 +162,14 @@
                     </tr>
                 </tfoot>
             </table>
+            </div>
         </div>
 
         <!-- Layanan Tambahan -->
         @if($transaksi->transaksiLayanan && $transaksi->transaksiLayanan->count() > 0)
         <div class="info-card" style="margin-top:24px; height:auto">
             <h4><x-lucide-concierge-bell class="lucide-icon-inline" /> Layanan Tambahan</h4>
+            <div class="cek-status-table">
             <table style="width:100%; margin-top:16px; border-collapse:collapse">
                 <thead>
                     <tr style="background:var(--bg)">
@@ -195,6 +198,7 @@
                     </tr>
                 </tfoot>
             </table>
+            </div>
         </div>
         @endif
 
