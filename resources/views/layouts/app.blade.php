@@ -14,6 +14,7 @@
     <style>html,body{height:100%}</style>
 </head>
 <body>
+    @include('partials.icons')
     <!-- Page Loading Overlay -->
     <div class="page-loader" id="pageLoader">
         <div class="loader-inner">

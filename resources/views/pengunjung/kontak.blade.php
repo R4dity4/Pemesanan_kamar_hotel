@@ -17,7 +17,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11689.59693002208!2d110.42587544717635!3d-6.993250668199921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b59293bdfe5%3A0x684ecd8ad245383a!2sLapangan%20Pancasila%20Simpang%20Lima%20Semarang!5e0!3m2!1sid!2sid!4v1771362010014!5m2!1sid!2sid" style="border:0; width:100%; height:350px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="info-card" style="height:auto; margin-top:24px">
-                <h4><x-lucide-map-pin class="lucide-icon-inline" /> Alamat</h4>
+                <h4><svg class="lucide-icon-inline"><use href="#i-map-pin"/></svg> Alamat</h4>
                 <p style="line-height:1.8; color:#666">
                     Jl. Nasional 14 No.10, Karangkidul<br>
                     Kec. Semarang Tengah<br>
@@ -29,7 +29,7 @@
         <!-- Kanan: Kontak & Form -->
         <div>
             <div class="info-card" style="height:auto; margin-bottom:24px">
-                <h4><x-lucide-phone class="lucide-icon-inline" /> Kontak Reservasi</h4>
+                <h4><svg class="lucide-icon-inline"><use href="#i-phone"/></svg> Kontak Reservasi</h4>
                 <div style="margin-top:16px">
                     <p style="margin:0 0 12px; display:flex; align-items:center; gap:10px; flex-wrap:wrap">
                         <span style="min-width:80px; color:#666">Telepon</span>
@@ -44,17 +44,17 @@
                         <strong>info@hotelx.id</strong>
                     </p>
                     <p style="margin:16px 0 0; padding-top:16px; border-top:1px solid #eee; color:#666; font-size:14px">
-                        <x-lucide-clock class="lucide-icon-inline" /> Layanan 24/7 — Kami siap membantu Anda kapan saja
+                        <svg class="lucide-icon-inline"><use href="#i-clock"/></svg> Layanan 24/7 — Kami siap membantu Anda kapan saja
                     </p>
                 </div>
             </div>
 
             <div class="info-card" style="height:auto">
-                <h4><x-lucide-mail class="lucide-icon-inline" /> Kirim Pesan</h4>
+                <h4><svg class="lucide-icon-inline"><use href="#i-mail"/></svg> Kirim Pesan</h4>
 
                 @if(session('success'))
                 <div class="alert alert-success" style="background:#d4edda; color:#155724; padding:12px 16px; border-radius:8px; margin-bottom:16px">
-                    <x-lucide-check class="lucide-icon-check" /> {{ session('success') }}
+                    <svg class="lucide-icon-check"><use href="#i-check"/></svg> {{ session('success') }}
                 </div>
                 @endif
 

@@ -2,7 +2,7 @@
 <div class="breadcrumb-bar">
     <div class="container">
         <ol class="breadcrumb">
-            <li><a href="/"><x-lucide-home style="width:12px;height:12px;vertical-align:middle;margin-right:2px" /> Beranda</a></li>
+            <li><a href="/"><svg style="width:12px;height:12px;vertical-align:middle;margin-right:2px"><use href="#i-home"/></svg> Beranda</a></li>
             @foreach($breadcrumbs as $bc)
                 <li><span class="sep">›</span></li>
                 @if($loop->last)

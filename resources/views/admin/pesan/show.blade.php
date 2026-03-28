@@ -4,17 +4,17 @@
 
 @section('content')
 <div class="page-header">
-    <a href="/admin/pesan" class="btn btn-secondary"><x-lucide-arrow-left class="lucide-icon-btn" /> Kembali</a>
+    <a href="/admin/pesan" class="btn btn-secondary"><svg class="lucide-icon-btn"><use href="#i-arrow-left"/></svg> Kembali</a>
 </div>
 
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title"><x-lucide-mail class="lucide-icon-inline" /> Detail Pesan</h3>
+        <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-mail"/></svg> Detail Pesan</h3>
         <div class="header-actions">
             <form action="/admin/pesan/{{ $pesan->id }}" method="POST" style="display:inline" onsubmit="return confirm('Hapus pesan ini?')">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-sm btn-danger"><x-lucide-trash-2 class="lucide-icon-btn" /> Hapus</button>
+                <button type="submit" class="btn btn-sm btn-danger"><svg class="lucide-icon-btn"><use href="#i-trash-2"/></svg> Hapus</button>
             </form>
         </div>
     </div>
@@ -79,11 +79,11 @@
             <h4>Balas Pesan</h4>
             <div class="reply-buttons">
                 <a href="mailto:{{ $pesan->email }}?subject=Re: {{ ucfirst($pesan->topik) }} - HOTELX" class="btn btn-primary">
-                    <x-lucide-mail class="lucide-icon-btn" /> Balas via Email
+                    <svg class="lucide-icon-btn"><use href="#i-mail"/></svg> Balas via Email
                 </a>
                 @if($pesan->telepon)
                 <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $pesan->telepon) }}" target="_blank" class="btn btn-success">
-                    <x-lucide-message-circle class="lucide-icon-btn" /> Balas via WhatsApp
+                    <svg class="lucide-icon-btn"><use href="#i-message-circle"/></svg> Balas via WhatsApp
                 </a>
                 @endif
             </div>

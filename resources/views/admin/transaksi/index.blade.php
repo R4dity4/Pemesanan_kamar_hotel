@@ -6,28 +6,28 @@
 <!-- Stats Cards -->
 <div class="stats-grid-4">
     <div class="stat-mini">
-        <span class="stat-icon"><x-lucide-clipboard-list class="lucide-icon" /></span>
+        <span class="stat-icon"><svg class="lucide-icon"><use href="#i-clipboard-list"/></svg></span>
         <div class="stat-data">
             <div class="stat-number">{{ $stats['total'] ?? 0 }}</div>
             <div class="stat-label">Total</div>
         </div>
     </div>
     <div class="stat-mini warning">
-        <span class="stat-icon"><x-lucide-clock class="lucide-icon" /></span>
+        <span class="stat-icon"><svg class="lucide-icon"><use href="#i-clock"/></svg></span>
         <div class="stat-data">
             <div class="stat-number">{{ $stats['pending'] ?? 0 }}</div>
             <div class="stat-label">Pending</div>
         </div>
     </div>
     <div class="stat-mini success">
-        <span class="stat-icon"><x-lucide-check class="lucide-icon" /></span>
+        <span class="stat-icon"><svg class="lucide-icon"><use href="#i-check"/></svg></span>
         <div class="stat-data">
             <div class="stat-number">{{ $stats['selesai'] ?? 0 }}</div>
             <div class="stat-label">Selesai</div>
         </div>
     </div>
     <div class="stat-mini info">
-        <span class="stat-icon"><x-lucide-wallet class="lucide-icon" /></span>
+        <span class="stat-icon"><svg class="lucide-icon"><use href="#i-wallet"/></svg></span>
         <div class="stat-data">
             <div class="stat-number">{{ number_format(($stats['revenue'] ?? 0) / 1000000, 1) }}jt</div>
             <div class="stat-label">Pendapatan</div>
@@ -63,7 +63,7 @@
                 <input type="text" name="search" class="form-control" placeholder="No transaksi / nama tamu" value="{{ request('search') }}">
             </div>
             <div class="filter-actions">
-                <button type="submit" class="btn btn-primary"><x-lucide-search class="lucide-icon-btn" /> Filter</button>
+                <button type="submit" class="btn btn-primary"><svg class="lucide-icon-btn"><use href="#i-search"/></svg> Filter</button>
                 <a href="/admin/transaksi" class="btn btn-secondary">Reset</a>
             </div>
         </div>
@@ -73,7 +73,7 @@
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">Daftar Transaksi</h3>
-        <a href="/admin/transaksi/export?{{ http_build_query(request()->all()) }}" class="btn btn-sm btn-success"><x-lucide-download class="lucide-icon-btn" /> Export CSV</a>
+        <a href="/admin/transaksi/export?{{ http_build_query(request()->all()) }}" class="btn btn-sm btn-success"><svg class="lucide-icon-btn"><use href="#i-download"/></svg> Export CSV</a>
     </div>
     <div class="table-container">
         <table>

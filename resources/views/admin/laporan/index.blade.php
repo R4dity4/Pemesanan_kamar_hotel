@@ -37,7 +37,7 @@
                 </select>
             </div>
             <div class="filter-actions">
-                <button type="submit" class="btn btn-primary"><x-lucide-bar-chart-3 class="lucide-icon-btn" /> Tampilkan</button>
+                <button type="submit" class="btn btn-primary"><svg class="lucide-icon-btn"><use href="#i-bar-chart-3"/></svg> Tampilkan</button>
             </div>
         </div>
     </form>
@@ -46,28 +46,28 @@
 <!-- Stats Overview -->
 <div class="stats-grid-4">
     <div class="stat-mini">
-        <span class="stat-icon"><x-lucide-clipboard-list class="lucide-icon" /></span>
+        <span class="stat-icon"><svg class="lucide-icon"><use href="#i-clipboard-list"/></svg></span>
         <div class="stat-data">
             <div class="stat-number">{{ $data['totalTransaksi'] }}</div>
             <div class="stat-label">Total Transaksi</div>
         </div>
     </div>
     <div class="stat-mini success">
-        <span class="stat-icon"><x-lucide-wallet class="lucide-icon" /></span>
+        <span class="stat-icon"><svg class="lucide-icon"><use href="#i-wallet"/></svg></span>
         <div class="stat-data">
             <div class="stat-number">{{ number_format($data['totalRevenue'] / 1000000, 1) }}jt</div>
             <div class="stat-label">Pendapatan</div>
         </div>
     </div>
     <div class="stat-mini info">
-        <span class="stat-icon"><x-lucide-bed-double class="lucide-icon" /></span>
+        <span class="stat-icon"><svg class="lucide-icon"><use href="#i-bed-double"/></svg></span>
         <div class="stat-data">
             <div class="stat-number">{{ $data['totalKamarDipesan'] }}</div>
             <div class="stat-label">Kamar Dipesan</div>
         </div>
     </div>
     <div class="stat-mini warning">
-        <span class="stat-icon"><x-lucide-calendar-days class="lucide-icon" /></span>
+        <span class="stat-icon"><svg class="lucide-icon"><use href="#i-calendar-days"/></svg></span>
         <div class="stat-data">
             <div class="stat-number">{{ $data['avgLamaNginap'] }}</div>
             <div class="stat-label">Rata-rata Malam</div>
@@ -79,7 +79,7 @@
 <div class="dashboard-row">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title"><x-lucide-bar-chart-3 class="lucide-icon-inline" /> Distribusi Status</h3>
+            <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-bar-chart-3"/></svg> Distribusi Status</h3>
         </div>
         <div class="status-grid">
             <div class="status-item pending">
@@ -106,7 +106,7 @@
     </div>
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title"><x-lucide-trophy class="lucide-icon-inline" /> Kamar Terpopuler</h3>
+            <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-trophy"/></svg> Kamar Terpopuler</h3>
         </div>
         @if(count($data['topRooms']) > 0)
         <div class="table-container">
@@ -140,7 +140,7 @@
 @if($periode === 'tahunan' && count($data['monthlyData']) > 0)
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title"><x-lucide-calendar class="lucide-icon-inline" /> Rekap Bulanan {{ $tahun }}</h3>
+        <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-calendar"/></svg> Rekap Bulanan {{ $tahun }}</h3>
     </div>
     <div class="table-container">
         <table>
@@ -175,7 +175,7 @@
 @if($periode === 'bulanan' && count($data['dailyData']) > 0)
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title"><x-lucide-calendar-days class="lucide-icon-inline" /> Rekap Harian {{ \Carbon\Carbon::create($tahun, $bulan, 1)->format('F Y') }}</h3>
+        <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-calendar-days"/></svg> Rekap Harian {{ \Carbon\Carbon::create($tahun, $bulan, 1)->format('F Y') }}</h3>
     </div>
     <div class="table-container">
         <table>
@@ -203,9 +203,9 @@
 <!-- Transaction List -->
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title"><x-lucide-clipboard-list class="lucide-icon-inline" /> Daftar Transaksi - {{ $data['periodLabel'] }}</h3>
+        <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-clipboard-list"/></svg> Daftar Transaksi - {{ $data['periodLabel'] }}</h3>
         <a href="/admin/laporan/download?periode={{ $periode }}&tahun={{ $tahun }}&bulan={{ $bulan }}&tanggal={{ $tanggal }}" class="btn btn-sm btn-success">
-            <x-lucide-download class="lucide-icon-btn" /> Download PDF
+            <svg class="lucide-icon-btn"><use href="#i-download"/></svg> Download PDF
         </a>
     </div>
     <div class="table-container">

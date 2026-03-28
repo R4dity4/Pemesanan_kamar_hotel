@@ -14,7 +14,7 @@
 
         @if(request('success'))
         <div class="alert alert-success" style="text-align:center">
-            <h3 style="margin:0 0 10px"><x-lucide-check-circle class="lucide-icon-inline" /> Reservasi Berhasil!</h3>
+            <h3 style="margin:0 0 10px"><svg class="lucide-icon-inline"><use href="#i-check-circle"/></svg> Reservasi Berhasil!</h3>
             <p style="margin:0">Reservasi Anda telah diterima.</p>
             <p style="margin:10px 0 0; font-size:14px">Silakan tunggu konfirmasi dari admin. <a href="/reservasi/cek?no_ktp={{ request('no_ktp') }}" style="color:#155724; font-weight:600">Cek Status Pesanan →</a></p>
         </div>
@@ -51,7 +51,7 @@
 
                 {{-- ===== STEP 1: Data Diri ===== --}}
                 <div class="step-panel active" data-step="1">
-                    <div class="form-title" style="margin-top:0"><x-lucide-user class="lucide-icon-inline" /> Data Diri</div>
+                    <div class="form-title" style="margin-top:0"><svg class="lucide-icon-inline"><use href="#i-user"/></svg> Data Diri</div>
                     <div class="form-grid-3">
                         <div class="form-group">
                             <label>Nama Lengkap *</label>
@@ -94,7 +94,7 @@
 
                 {{-- ===== STEP 2: Pilih Kamar ===== --}}
                 <div class="step-panel" data-step="2">
-                    <div class="form-title" style="margin-top:0"><x-lucide-calendar class="lucide-icon-inline" /> Detail Reservasi</div>
+                    <div class="form-title" style="margin-top:0"><svg class="lucide-icon-inline"><use href="#i-calendar"/></svg> Detail Reservasi</div>
                     <div class="form-grid-4">
                         <div class="form-group">
                             <label>Tanggal Check-in *</label>
@@ -111,7 +111,7 @@
                         </div>
                     </div>
 
-                    <div class="form-title"><x-lucide-door-open class="lucide-icon-inline" /> Pilih Kamar <span id="kamar-loading" style="display:none; font-weight:normal; color:#666">(Mengecek...)</span></div>
+                    <div class="form-title"><svg class="lucide-icon-inline"><use href="#i-door-open"/></svg> Pilih Kamar <span id="kamar-loading" style="display:none; font-weight:normal; color:#666">(Mengecek...)</span></div>
                     <div class="kamar-list" id="kamar-list">
                         @forelse($kamars as $kamar)
                         <label class="kamar-item {{ $kamar->status !== 'tersedia' ? 'kamar-dipesan' : '' }}" data-no-kamar="{{ $kamar->no_kamar }}" data-harga="{{ $kamar->harga }}" data-jenis="{{ $kamar->jenis_kamar }}">
@@ -120,7 +120,7 @@
                                 {{ $kamar->status !== 'tersedia' ? 'disabled' : '' }}>
                             <div class="kamar-info">
                                 <strong class="{{ $kamar->status !== 'tersedia' ? 'text-strikethrough' : '' }}">
-                                    <x-lucide-door-open style="width:14px;height:14px;vertical-align:middle;margin-right:2px;color:var(--accent)" />
+                                    <svg style="width:14px;height:14px;vertical-align:middle;margin-right:2px;color:var(--accent)"><use href="#i-door-open"/></svg>
                                     No. {{ $kamar->no_kamar }} &middot; {{ $kamar->jenis_kamar }}
                                 </strong>
                                 <small class="{{ $kamar->status !== 'tersedia' ? 'text-strikethrough' : '' }}">
@@ -133,7 +133,7 @@
                         </label>
                         @empty
                         <div class="empty-state" style="grid-column: span 2;">
-                            <x-lucide-bed-double class="empty-state-icon" />
+                            <svg class="empty-state-icon"><use href="#i-bed-double"/></svg>
                             <h4>Tidak Ada Kamar</h4>
                             <p>Belum ada kamar yang tersedia saat ini. Silakan coba lagi nanti.</p>
                         </div>
@@ -171,7 +171,7 @@
 
                 {{-- ===== STEP 3: Layanan Tambahan ===== --}}
                 <div class="step-panel" data-step="3">
-                    <div class="form-title" style="margin-top:0"><x-lucide-concierge-bell class="lucide-icon-inline" /> Layanan Tambahan <span style="font-weight:normal; color:#666">(Opsional)</span></div>
+                    <div class="form-title" style="margin-top:0"><svg class="lucide-icon-inline"><use href="#i-concierge-bell"/></svg> Layanan Tambahan <span style="font-weight:normal; color:#666">(Opsional)</span></div>
                     <p style="color:#666; font-size:13px; margin:-8px 0 16px">Tambahkan layanan ekstra untuk kenyamanan Anda. Lewati jika tidak diperlukan.</p>
 
                     @if(isset($layananTambahan) && $layananTambahan->count() > 0)
@@ -193,7 +193,7 @@
                     </div>
                     @else
                     <div class="empty-state">
-                        <x-lucide-sparkles class="empty-state-icon" />
+                        <svg class="empty-state-icon"><use href="#i-sparkles"/></svg>
                         <h4>Tidak Ada Layanan Tambahan</h4>
                         <p>Belum ada layanan tambahan yang tersedia. Anda dapat langsung lanjut ke konfirmasi.</p>
                     </div>
@@ -227,7 +227,7 @@
 
                 {{-- ===== STEP 4: Review & Konfirmasi ===== --}}
                 <div class="step-panel" data-step="4">
-                    <div class="form-title" style="margin-top:0"><x-lucide-clipboard-check class="lucide-icon-inline" /> Review Pesanan Anda</div>
+                    <div class="form-title" style="margin-top:0"><svg class="lucide-icon-inline"><use href="#i-clipboard-check"/></svg> Review Pesanan Anda</div>
                     <p style="color:#666; font-size:13px; margin:-8px 0 20px">Periksa kembali data Anda sebelum mengirim reservasi.</p>
 
                     {{-- Data Diri Review --}}
@@ -321,7 +321,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Kembali
                         </button>
                         <button class="btn-reserve" type="submit" id="submitBtn" style="text-align:center">
-                            <x-lucide-send class="lucide-icon-inline" /> Kirim Reservasi
+                            <svg class="lucide-icon-inline"><use href="#i-send"/></svg> Kirim Reservasi
                         </button>
                     </div>
                 </div>
@@ -331,7 +331,7 @@
         <!-- Availability Calendar Grid -->
         <div class="info-card" style="height:auto; margin-bottom:30px; padding:0; overflow:hidden">
             <div style="padding:20px 24px 12px; border-bottom:1px solid #eee; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px">
-                <h4 style="margin:0"><x-lucide-calendar-range class="lucide-icon-inline" /> Ketersediaan Kamar — 7 Hari Kedepan</h4>
+                <h4 style="margin:0"><svg class="lucide-icon-inline"><use href="#i-calendar-range"/></svg> Ketersediaan Kamar — 7 Hari Kedepan</h4>
                 <div style="display:flex; align-items:center; gap:16px; font-size:12px; color:#666">
                     <span><span class="cal-dot cal-dot-available"></span> Tersedia</span>
                     <span><span class="cal-dot cal-dot-booked"></span> Dipesan</span>
@@ -390,7 +390,7 @@
         <!-- Bottom Cards - 3 columns -->
         <div class="reservasi-info-grid">
             <div class="info-card" style="height:auto">
-                <h4><x-lucide-search class="lucide-icon-inline" /> Cek Status Pesanan</h4>
+                <h4><svg class="lucide-icon-inline"><use href="#i-search"/></svg> Cek Status Pesanan</h4>
                 <p style="color:#666; font-size:14px; margin-bottom:16px">Sudah reservasi? Masukkan No. KTP untuk melihat status.</p>
                 <form action="{{ route('reservasi.cek') }}" method="GET">
                     <div class="form-group" style="margin-bottom:12px">
@@ -401,7 +401,7 @@
             </div>
 
             <div class="info-card" style="height:auto">
-                <h4><x-lucide-info class="lucide-icon-inline" /> Informasi Penting</h4>
+                <h4><svg class="lucide-icon-inline"><use href="#i-info"/></svg> Informasi Penting</h4>
                 <ul style="margin:12px 0 0; padding-left:18px; color:#666; line-height:1.9; font-size:14px">
                     <li>Check-in: <strong>14:00 WIB</strong></li>
                     <li>Check-out: <strong>12:00 WIB</strong></li>
@@ -412,10 +412,10 @@
             </div>
 
             <div class="info-card" style="height:auto; background:var(--dark); color:var(--white)">
-                <h4 style="color:var(--white)"><x-lucide-headphones class="lucide-icon-inline" /> Butuh Bantuan?</h4>
+                <h4 style="color:var(--white)"><svg class="lucide-icon-inline"><use href="#i-headphones"/></svg> Butuh Bantuan?</h4>
                 <p style="color:rgba(255,255,255,0.7); font-size:14px; margin:12px 0 16px">Tim reservasi kami siap membantu:</p>
-                <p style="margin:0 0 8px; font-size:16px"><strong><x-lucide-phone class="lucide-icon-inline" style="color:#fff" /> +62 21 1234 5678</strong></p>
-                <p style="margin:0; font-size:14px; color:rgba(255,255,255,0.7)"><x-lucide-mail class="lucide-icon-inline" /> reservasi@hotelx.com</p>
+                <p style="margin:0 0 8px; font-size:16px"><strong><svg class="lucide-icon-inline" style="color:#fff"><use href="#i-phone"/></svg> +62 21 1234 5678</strong></p>
+                <p style="margin:0; font-size:14px; color:rgba(255,255,255,0.7)"><svg class="lucide-icon-inline"><use href="#i-mail"/></svg> reservasi@hotelx.com</p>
             </div>
         </div>
     </div>

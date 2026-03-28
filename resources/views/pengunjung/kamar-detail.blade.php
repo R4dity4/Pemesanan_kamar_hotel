@@ -24,7 +24,7 @@
 <div class="room-hero" style="background-image:url('{{ $imgUrl }}')">
     <div class="room-hero-overlay"></div>
     <div class="container room-hero-content">
-        <a href="/kamar" class="back-link"><x-lucide-arrow-left class="lucide-icon-inline" /> Kembali ke Daftar Kamar</a>
+        <a href="/kamar" class="back-link"><svg class="lucide-icon-inline"><use href="#i-arrow-left"/></svg> Kembali ke Daftar Kamar</a>
         <h1>{{ $kamar->jenis_kamar }}</h1>
         <p>Kamar No. {{ $kamar->no_kamar }}</p>
     </div>
@@ -90,7 +90,7 @@
                     @endphp
                     @foreach($fasilitas as $f)
                     <div class="fasilitas-item">
-                        <x-lucide-check class="lucide-icon-check" />
+                        <svg class="lucide-icon-check"><use href="#i-check"/></svg>
                         <span>{{ $f }}</span>
                     </div>
                     @endforeach
@@ -138,7 +138,7 @@
 
                 <div style="margin-top:24px; padding-top:24px; border-top:1px solid #eee">
                     <p style="margin:0 0 8px; font-size:13px; color:#666">Butuh bantuan?</p>
-                    <p style="margin:0; font-weight:600"><x-lucide-phone class="lucide-icon-inline" /> +62 00 2606 2007</p>
+                    <p style="margin:0; font-weight:600"><svg class="lucide-icon-inline"><use href="#i-phone"/></svg> +62 00 2606 2007</p>
                 </div>
             </div>
         </div>

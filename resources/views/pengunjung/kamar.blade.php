@@ -14,7 +14,7 @@
     <div class="search-filter-bar">
         <form action="{{ route('kamar') }}" method="GET" class="search-form">
             <div class="search-input-wrapper">
-                <x-lucide-search class="search-icon" />
+                <svg class="search-icon"><use href="#i-search"/></svg>
                 <input type="text" name="search" class="search-input" placeholder="Cari kamar..." value="{{ request('search') }}">
             </div>
             <select name="jenis" class="filter-select">
@@ -30,11 +30,11 @@
                 <option value="terisi" {{ request('status') == 'terisi' ? 'selected' : '' }}>Terisi</option>
             </select>
             <button type="submit" class="btn-filter">
-                <x-lucide-filter class="lucide-icon-inline" /> Filter
+                <svg class="lucide-icon-inline"><use href="#i-filter"/></svg> Filter
             </button>
             @if(request('search') || request('jenis') || request('status'))
             <a href="{{ route('kamar') }}" class="btn-reset">
-                <x-lucide-x class="lucide-icon-inline" /> Reset
+                <svg class="lucide-icon-inline"><use href="#i-x"/></svg> Reset
             </a>
             @endif
         </form>
@@ -95,7 +95,7 @@
         </div>
         @empty
         <div style="grid-column:1/-1; text-align:center; padding:60px; color:#666">
-            <p style="font-size:48px; margin:0"><x-lucide-building class="lucide-icon-feature" /></p>
+            <p style="font-size:48px; margin:0"><svg class="lucide-icon-feature"><use href="#i-building"/></svg></p>
             @if(request('search') || request('jenis') || request('status'))
             <h3>Tidak Ada Hasil</h3>
             <p>Tidak ditemukan kamar yang sesuai dengan pencarian Anda.</p>

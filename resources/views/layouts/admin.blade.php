@@ -9,6 +9,7 @@
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 </head>
 <body>
+    @include('partials.icons')
     <div class="admin-wrapper">
         <!-- Mobile Overlay -->
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -20,23 +21,23 @@
             </div>
             <nav class="sidebar-nav">
                 <a href="/admin" class="{{ request()->is('admin') ? 'active' : '' }}">
-                    <x-lucide-layout-dashboard class="icon" /> Dashboard
+                    <svg class="icon"><use href="#i-layout-dashboard"/></svg> Dashboard
                 </a>
                 <a href="/admin/kamar" class="{{ request()->is('admin/kamar*') ? 'active' : '' }}">
-                    <x-lucide-bed-double class="icon" /> Data Kamar
+                    <svg class="icon"><use href="#i-bed-double"/></svg> Data Kamar
                 </a>
                 <a href="/admin/transaksi" class="{{ request()->is('admin/transaksi*') ? 'active' : '' }}">
-                    <x-lucide-clipboard-list class="icon" /> Transaksi
+                    <svg class="icon"><use href="#i-clipboard-list"/></svg> Transaksi
                 </a>
                 <a href="/admin/pesan" class="{{ request()->is('admin/pesan*') ? 'active' : '' }}">
-                    <x-lucide-mail class="icon" /> Pesan Masuk
+                    <svg class="icon"><use href="#i-mail"/></svg> Pesan Masuk
                     @php $unreadCount = \App\Models\Pesan::where('dibaca', false)->count(); @endphp
                     @if($unreadCount > 0)
                     <span class="badge-notif">{{ $unreadCount }}</span>
                     @endif
                 </a>
                 <a href="/admin/laporan" class="{{ request()->is('admin/laporan*') ? 'active' : '' }}">
-                    <x-lucide-file-text class="icon" /> Laporan
+                    <svg class="icon"><use href="#i-file-text"/></svg> Laporan
                 </a>
             </nav>
             <div class="sidebar-footer">
@@ -53,12 +54,12 @@
         <main class="main-content">
             <header class="topbar">
                 <button class="mobile-sidebar-toggle" id="mobileSidebarToggle" aria-label="Toggle sidebar">
-                    <x-lucide-menu />
+                    <svg><use href="#i-menu"/></svg>
                 </button>
                 <h1>@yield('title', 'Dashboard')</h1>
                 <div class="topbar-actions">
                     <button class="notif-bell" id="notifBell" title="Notifikasi">
-                        <x-lucide-bell />
+                        <svg><use href="#i-bell"/></svg>
                         <span class="notif-badge" id="notifBadge" style="display:none">0</span>
                     </button>
                 </div>

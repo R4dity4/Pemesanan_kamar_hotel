@@ -24,7 +24,7 @@
         <div class="info-card" style="margin-bottom:30px; height:auto">
             <form action="{{ route('reservasi.cek') }}" method="GET" class="form-row" style="align-items:flex-end">
                 <div class="form-group" style="flex:1; margin:0">
-                    <label><x-lucide-credit-card class="lucide-icon-inline" /> No. KTP</label>
+                    <label><svg class="lucide-icon-inline"><use href="#i-credit-card"/></svg> No. KTP</label>
                     <input type="text" name="no_ktp" class="form-control" value="{{ $noKtp ?? '' }}" placeholder="Masukkan nomor KTP Anda" required>
                 </div>
                 <button class="btn-reserve" type="submit" style="height:48px">Cek Status</button>
@@ -33,7 +33,7 @@
 
         @if($noKtp && (!isset($transaksiList) || $transaksiList->count() == 0))
         <div class="alert alert-error" style="text-align:center">
-            <h4 style="margin:0 0 10px"><x-lucide-search-x class="lucide-icon-inline" /> Pesanan Tidak Ditemukan</h4>
+            <h4 style="margin:0 0 10px"><svg class="lucide-icon-inline"><use href="#i-search-x"/></svg> Pesanan Tidak Ditemukan</h4>
             <p style="margin:0">Tidak ada pesanan dengan No. KTP <strong>{{ $noKtp }}</strong>. Pastikan nomor KTP sudah benar.</p>
         </div>
         @endif
@@ -42,7 +42,7 @@
         <!-- List Transaksi jika ada beberapa -->
         @if($transaksiList->count() > 1)
         <div class="info-card" style="margin-bottom:24px; height:auto">
-            <h4><x-lucide-list class="lucide-icon-inline" /> Daftar Pesanan Anda</h4>
+            <h4><svg class="lucide-icon-inline"><use href="#i-list"/></svg> Daftar Pesanan Anda</h4>
             <p style="color:#666; font-size:14px; margin-bottom:16px">Anda memiliki {{ $transaksiList->count() }} pesanan. Klik untuk melihat detail.</p>
             <div class="transaksi-list">
                 @foreach($transaksiList as $trx)
@@ -81,7 +81,7 @@
         <div class="form-grid">
             <!-- Detail Transaksi -->
             <div class="info-card" style="height:auto">
-                <h4><x-lucide-receipt class="lucide-icon-inline" /> Detail Transaksi</h4>
+                <h4><svg class="lucide-icon-inline"><use href="#i-receipt"/></svg> Detail Transaksi</h4>
                 <table class="info-table" style="margin-top:16px">
                     <tr>
                         <td>No. Transaksi</td>
@@ -112,7 +112,7 @@
 
             <!-- Data Pengunjung -->
             <div class="info-card" style="height:auto">
-                <h4><x-lucide-user class="lucide-icon-inline" /> Data Pemesan</h4>
+                <h4><svg class="lucide-icon-inline"><use href="#i-user"/></svg> Data Pemesan</h4>
                 <table class="info-table" style="margin-top:16px">
                     <tr>
                         <td>Nama</td>
@@ -132,7 +132,7 @@
 
         <!-- Kamar yang Dipesan -->
         <div class="info-card" style="margin-top:24px; height:auto">
-            <h4><x-lucide-bed-double class="lucide-icon-inline" /> Kamar yang Dipesan</h4>
+            <h4><svg class="lucide-icon-inline"><use href="#i-bed-double"/></svg> Kamar yang Dipesan</h4>
             <div class="cek-status-table">
             <table style="width:100%; margin-top:16px; border-collapse:collapse">
                 <thead>
@@ -168,7 +168,7 @@
         <!-- Layanan Tambahan -->
         @if($transaksi->transaksiLayanan && $transaksi->transaksiLayanan->count() > 0)
         <div class="info-card" style="margin-top:24px; height:auto">
-            <h4><x-lucide-concierge-bell class="lucide-icon-inline" /> Layanan Tambahan</h4>
+            <h4><svg class="lucide-icon-inline"><use href="#i-concierge-bell"/></svg> Layanan Tambahan</h4>
             <div class="cek-status-table">
             <table style="width:100%; margin-top:16px; border-collapse:collapse">
                 <thead>
@@ -205,7 +205,7 @@
         <!-- Upload Bukti Bayar (jika status dikonfirmasi) -->
         @if($transaksi->status == 'dikonfirmasi')
         <div class="info-card" style="margin-top:24px; height:auto; background:#e7f3ff; border:2px solid #17a2b8">
-            <h4 style="color:#17a2b8"><x-lucide-upload class="lucide-icon-inline" /> Upload Bukti Pembayaran</h4>
+            <h4 style="color:#17a2b8"><svg class="lucide-icon-inline"><use href="#i-upload"/></svg> Upload Bukti Pembayaran</h4>
             <p style="color:#666; margin-top:8px">Pesanan Anda telah dikonfirmasi. Silakan lakukan pembayaran dan upload bukti transfer.</p>
 
             <div style="background:var(--white); padding:20px; border-radius:8px; margin-top:16px; text-align:center">
@@ -229,7 +229,7 @@
         <!-- Bukti Bayar yang sudah diupload -->
         @if($transaksi->bukti_bayar && in_array($transaksi->status, ['dibayar', 'selesai']))
         <div class="info-card" style="margin-top:24px; height:auto; background:#d4edda; border:2px solid #28a745">
-            <h4 style="color:#28a745"><x-lucide-check-circle class="lucide-icon-inline" /> Bukti Pembayaran Terverifikasi</h4>
+            <h4 style="color:#28a745"><svg class="lucide-icon-inline"><use href="#i-check-circle"/></svg> Bukti Pembayaran Terverifikasi</h4>
             <p style="color:#666; margin-top:8px">Pembayaran Anda telah dikonfirmasi oleh admin.</p>
             <a href="{{ asset('storage/' . $transaksi->bukti_bayar) }}" target="_blank">
                 <img src="{{ asset('storage/' . $transaksi->bukti_bayar) }}" style="max-width:300px; margin-top:12px; border-radius:8px; border:2px solid #28a745">
@@ -238,11 +238,11 @@
 
         <!-- Tombol Invoice -->
         <div class="info-card" style="margin-top:24px; height:auto; background:#fff3cd; border:2px solid #ffc107">
-            <h4 style="color:#856404"><x-lucide-file-text class="lucide-icon-inline" /> Invoice Pembayaran</h4>
+            <h4 style="color:#856404"><svg class="lucide-icon-inline"><use href="#i-file-text"/></svg> Invoice Pembayaran</h4>
             <p style="color:#666; margin-top:8px">Invoice Anda tersedia. Anda dapat melihat, mencetak, atau mengunduh invoice.</p>
             <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap">
                 <a href="{{ route('reservasi.invoice', $transaksi->no_transaksi) }}" class="btn-reserve" target="_blank" style="text-decoration:none">
-                    <x-lucide-printer class="lucide-icon-inline" /> Lihat & Cetak Invoice
+                    <svg class="lucide-icon-inline"><use href="#i-printer"/></svg> Lihat & Cetak Invoice
                 </a>
             </div>
         </div>
@@ -253,7 +253,7 @@
 
         <div style="text-align:center; margin-top:40px">
             <a href="/reservasi" class="btn-reserve" style="background:#666; border-color:#666; text-decoration:none">
-                <x-lucide-arrow-left class="lucide-icon-inline" /> Kembali ke Reservasi
+                <svg class="lucide-icon-inline"><use href="#i-arrow-left"/></svg> Kembali ke Reservasi
             </a>
         </div>
     </div>

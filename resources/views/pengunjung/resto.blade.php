@@ -10,7 +10,7 @@
 </div>
 
 <!-- Dining Venues -->
-<section class="container" style="padding-bottom:60px">
+<section class="container" style="margin-top: 40px;">
     <div class="dining-showcase">
         <!-- Main Restaurant -->
         <div class="dining-venue">
@@ -24,10 +24,10 @@
                 <div class="dining-menu-preview">
                     <h5>Menu Unggulan:</h5>
                     <ul>
-                        <li><x-lucide-utensils class="lucide-icon-inline" /> Nasi Goreng Signature HOTELX</li>
-                        <li><x-lucide-utensils class="lucide-icon-inline" /> Grilled Australian Beef Tenderloin</li>
-                        <li><x-lucide-utensils class="lucide-icon-inline" /> Seafood Platter Mediterranean</li>
-                        <li><x-lucide-utensils class="lucide-icon-inline" /> Traditional Indonesian Rijsttafel</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-utensils"/></svg> Nasi Goreng Signature HOTELX</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-utensils"/></svg> Grilled Australian Beef Tenderloin</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-utensils"/></svg> Seafood Platter Mediterranean</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-utensils"/></svg> Traditional Indonesian Rijsttafel</li>
                     </ul>
                 </div>
 
@@ -60,10 +60,10 @@
                 <div class="dining-menu-preview">
                     <h5>Menu Favorit:</h5>
                     <ul>
-                        <li><x-lucide-coffee class="lucide-icon-inline" /> Specialty Coffee & Latte Art</li>
-                        <li><x-lucide-cake class="lucide-icon-inline" /> Pastries & Artisan Cakes</li>
-                        <li><x-lucide-sandwich class="lucide-icon-inline" /> Gourmet Sandwiches</li>
-                        <li><x-lucide-glass-water class="lucide-icon-inline" /> Afternoon Tea Set</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-coffee"/></svg> Specialty Coffee & Latte Art</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-cake"/></svg> Pastries & Artisan Cakes</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-sandwich"/></svg> Gourmet Sandwiches</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-glass-water"/></svg> Afternoon Tea Set</li>
                     </ul>
                 </div>
 
@@ -96,10 +96,10 @@
                 <div class="dining-menu-preview">
                     <h5>Tersedia 24 Jam:</h5>
                     <ul>
-                        <li><x-lucide-soup class="lucide-icon-inline" /> Mie & Nasi Goreng</li>
-                        <li><x-lucide-beef class="lucide-icon-inline" /> Burger & Snacks</li>
-                        <li><x-lucide-cup-soda class="lucide-icon-inline" /> Minuman Segar & Kopi</li>
-                        <li><x-lucide-ice-cream-cone class="lucide-icon-inline" /> Es Krim & Dessert</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-soup"/></svg> Mie & Nasi Goreng</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-beef"/></svg> Burger & Snacks</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-cup-soda"/></svg> Minuman Segar & Kopi</li>
+                        <li><svg class="lucide-icon-inline"><use href="#i-ice-cream-cone"/></svg> Es Krim & Dessert</li>
                     </ul>
                 </div>
 
@@ -131,22 +131,22 @@
 <section class="container" style="padding-bottom:80px">
     <div class="dining-services-grid">
         <div class="dining-service-card">
-            <div class="service-icon"><x-lucide-utensils class="lucide-icon-feature" /></div>
+            <div class="service-icon"><svg class="lucide-icon-feature"><use href="#i-utensils"/></svg></div>
             <h4>Room Service</h4>
             <p>Nikmati hidangan lezat langsung di kenyamanan kamar Anda dengan layanan room service 24 jam.</p>
         </div>
         <div class="dining-service-card">
-            <div class="service-icon"><x-lucide-cake class="lucide-icon-feature" /></div>
+            <div class="service-icon"><svg class="lucide-icon-feature"><use href="#i-cake"/></svg></div>
             <h4>Private Dining</h4>
             <p>Ruang makan privat untuk acara khusus dengan menu custom sesuai selera Anda.</p>
         </div>
         <div class="dining-service-card">
-            <div class="service-icon"><x-lucide-wine class="lucide-icon-feature" /></div>
+            <div class="service-icon"><svg class="lucide-icon-feature"><use href="#i-wine"/></svg></div>
             <h4>Wine Pairing</h4>
             <p>Sommelier kami siap membantu memilih wine terbaik untuk melengkapi hidangan Anda.</p>
         </div>
         <div class="dining-service-card">
-            <div class="service-icon"><x-lucide-party-popper class="lucide-icon-feature" /></div>
+            <div class="service-icon"><svg class="lucide-icon-feature"><use href="#i-party-popper"/></svg></div>
             <h4>Catering Event</h4>
             <p>Layanan catering profesional untuk meeting, seminar, dan acara spesial lainnya.</p>
         </div>
@@ -160,8 +160,8 @@
             <h2>Reservasi Meja</h2>
             <p>Untuk reservasi meja di restoran atau informasi lebih lanjut tentang layanan kuliner kami, silakan hubungi:</p>
             <div class="dining-contact">
-                <span><x-lucide-phone class="lucide-icon-inline" /> (021) 1234-5678</span>
-                <span><x-lucide-mail class="lucide-icon-inline" /> dining@hotelx.com</span>
+                <span><svg class="lucide-icon-inline"><use href="#i-phone"/></svg> (021) 1234-5678</span>
+                <span><svg class="lucide-icon-inline"><use href="#i-mail"/></svg> dining@hotelx.com</span>
             </div><br>
             <div>
             <a href="{{ route('kontak') }}" class="btn-reserve" style="margin-top:20px; text-decoration: none;">Hubungi Kami</a>

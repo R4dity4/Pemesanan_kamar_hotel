@@ -10,7 +10,7 @@
 </div>
 
 <!-- Main Facilities -->
-<section class="container" style="padding-bottom:60px">
+<section class="container" style="margin-top: 40px;">
     <div class="facility-showcase">
         <!-- Spa -->
         <div class="facility-item">
@@ -19,13 +19,13 @@
                 <h3>Spa & Wellness Center</h3>
                 <p>Pusat perawatan tubuh dan pikiran dengan berbagai treatment premium. Nikmati pijat relaksasi, aromaterapi, facial treatment, dan body scrub dengan terapis berpengalaman.</p>
                 <ul class="facility-features">
-                    <li><x-lucide-check class="lucide-icon-check" /> Massage Tradisional & Modern</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Aromatherapy Treatment</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Facial & Body Care</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Sauna & Steam Room</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Massage Tradisional & Modern</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Aromatherapy Treatment</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Facial & Body Care</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Sauna & Steam Room</li>
                 </ul>
                 <div class="facility-hours">
-                    <span><x-lucide-clock class="lucide-icon-inline" /> Jam Operasional: 09:00 - 21:00</span>
+                    <span><svg class="lucide-icon-inline"><use href="#i-clock"/></svg> Jam Operasional: 09:00 - 21:00</span>
                 </div>
             </div>
         </div>
@@ -37,13 +37,13 @@
                 <h3>Infinity Swimming Pool</h3>
                 <p>Kolam renang outdoor dengan pemandangan kota yang menakjubkan. Dilengkapi dengan area berjemur, poolside bar, dan jacuzzi untuk relaksasi maksimal.</p>
                 <ul class="facility-features">
-                    <li><x-lucide-check class="lucide-icon-check" /> Kolam Dewasa & Anak</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Poolside Bar & Service</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Sunbed & Cabana</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Jacuzzi & Hot Tub</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Kolam Dewasa & Anak</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Poolside Bar & Service</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Sunbed & Cabana</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Jacuzzi & Hot Tub</li>
                 </ul>
                 <div class="facility-hours">
-                    <span><x-lucide-clock class="lucide-icon-inline" /> Jam Operasional: 06:00 - 21:00</span>
+                    <span><svg class="lucide-icon-inline"><use href="#i-clock"/></svg> Jam Operasional: 06:00 - 21:00</span>
                 </div>
             </div>
         </div>
@@ -55,13 +55,13 @@
                 <h3>Fitness Center</h3>
                 <p>Gym modern dengan peralatan lengkap dari Technogym. Tersedia personal trainer bersertifikat untuk membantu mencapai target kebugaran Anda.</p>
                 <ul class="facility-features">
-                    <li><x-lucide-check class="lucide-icon-check" /> Cardio Equipment</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Weight Training Area</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Personal Training Available</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Yoga & Aerobic Studio</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Cardio Equipment</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Weight Training Area</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Personal Training Available</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Yoga & Aerobic Studio</li>
                 </ul>
                 <div class="facility-hours">
-                    <span><x-lucide-clock class="lucide-icon-inline" /> Jam Operasional: 24 Jam</span>
+                    <span><svg class="lucide-icon-inline"><use href="#i-clock"/></svg> Jam Operasional: 24 Jam</span>
                 </div>
             </div>
         </div>
@@ -77,42 +77,42 @@
 <section class="container" style="padding-bottom:80px">
     <div class="facilities-grid">
         <div class="facility-card">
-            <div class="facility-card-icon"><x-lucide-building-2 class="lucide-icon-feature" /></div>
+            <div class="facility-card-icon"><svg class="lucide-icon-feature"><use href="#i-building-2"/></svg></div>
             <h4>Business Center</h4>
             <p>Ruang kerja dengan komputer, printer, dan koneksi internet berkecepatan tinggi.</p>
         </div>
         <div class="facility-card">
-            <div class="facility-card-icon"><x-lucide-party-popper class="lucide-icon-feature" /></div>
+            <div class="facility-card-icon"><svg class="lucide-icon-feature"><use href="#i-party-popper"/></svg></div>
             <h4>Ballroom & Meeting</h4>
             <p>Ruang pertemuan dan ballroom untuk acara bisnis, seminar, dan pernikahan.</p>
         </div>
         <div class="facility-card">
-            <div class="facility-card-icon"><x-lucide-car class="lucide-icon-feature" /></div>
+            <div class="facility-card-icon"><svg class="lucide-icon-feature"><use href="#i-car"/></svg></div>
             <h4>Parkir Luas</h4>
             <p>Area parkir yang aman dengan kapasitas besar dan sistem keamanan 24 jam.</p>
         </div>
         <div class="facility-card">
-            <div class="facility-card-icon"><x-lucide-wifi class="lucide-icon-feature" /></div>
+            <div class="facility-card-icon"><svg class="lucide-icon-feature"><use href="#i-wifi"/></svg></div>
             <h4>WiFi Gratis</h4>
             <p>Koneksi internet berkecepatan tinggi gratis di seluruh area hotel.</p>
         </div>
         <div class="facility-card">
-            <div class="facility-card-icon"><x-lucide-bell-ring class="lucide-icon-feature" /></div>
+            <div class="facility-card-icon"><svg class="lucide-icon-feature"><use href="#i-bell-ring"/></svg></div>
             <h4>Concierge 24 Jam</h4>
             <p>Layanan concierge profesional siap membantu kebutuhan Anda kapan saja.</p>
         </div>
         <div class="facility-card">
-            <div class="facility-card-icon"><x-lucide-shirt class="lucide-icon-feature" /></div>
+            <div class="facility-card-icon"><svg class="lucide-icon-feature"><use href="#i-shirt"/></svg></div>
             <h4>Laundry Service</h4>
             <p>Layanan laundry dan dry cleaning dengan hasil berkualitas dan cepat.</p>
         </div>
         <div class="facility-card">
-            <div class="facility-card-icon"><x-lucide-bus class="lucide-icon-feature" /></div>
+            <div class="facility-card-icon"><svg class="lucide-icon-feature"><use href="#i-bus"/></svg></div>
             <h4>Airport Transfer</h4>
             <p>Layanan antar-jemput bandara dengan kendaraan nyaman dan sopir profesional.</p>
         </div>
         <div class="facility-card">
-            <div class="facility-card-icon"><x-lucide-landmark class="lucide-icon-feature" /></div>
+            <div class="facility-card-icon"><svg class="lucide-icon-feature"><use href="#i-landmark"/></svg></div>
             <h4>ATM Center</h4>
             <p>Tersedia ATM dari berbagai bank untuk kemudahan transaksi keuangan Anda.</p>
         </div>

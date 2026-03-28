@@ -141,9 +141,9 @@
 @endif
 
 <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap">
-    <a href="/admin/transaksi" class="btn btn-secondary"><x-lucide-arrow-left class="lucide-icon-btn" /> Kembali</a>
+    <a href="/admin/transaksi" class="btn btn-secondary"><svg class="lucide-icon-btn"><use href="#i-arrow-left"/></svg> Kembali</a>
     @if(in_array($transaksi->status, ['dibayar', 'selesai']))
-    <a href="{{ route('reservasi.invoice', $transaksi->no_transaksi) }}" target="_blank" class="btn btn-primary"><x-lucide-printer class="lucide-icon-btn" /> Cetak Invoice</a>
+    <a href="{{ route('reservasi.invoice', $transaksi->no_transaksi) }}" target="_blank" class="btn btn-primary"><svg class="lucide-icon-btn"><use href="#i-printer"/></svg> Cetak Invoice</a>
     @endif
 </div>
 @endsection

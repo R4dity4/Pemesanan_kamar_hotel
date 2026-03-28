@@ -6,28 +6,28 @@
 <!-- Stats Cards -->
 <div class="stats-grid">
     <div class="stat-card accent">
-        <div class="stat-icon"><x-lucide-building class="lucide-icon" /></div>
+        <div class="stat-icon"><svg class="lucide-icon"><use href="#i-building"/></svg></div>
         <div class="stat-info">
             <div class="label">Total Kamar</div>
             <div class="value">{{ $totalKamar }}</div>
         </div>
     </div>
     <div class="stat-card success">
-        <div class="stat-icon"><x-lucide-check-circle class="lucide-icon" /></div>
+        <div class="stat-icon"><svg class="lucide-icon"><use href="#i-check-circle"/></svg></div>
         <div class="stat-info">
             <div class="label">Kamar Tersedia</div>
             <div class="value">{{ $kamarTersedia }}</div>
         </div>
     </div>
     <div class="stat-card info">
-        <div class="stat-icon"><x-lucide-clipboard-list class="lucide-icon" /></div>
+        <div class="stat-icon"><svg class="lucide-icon"><use href="#i-clipboard-list"/></svg></div>
         <div class="stat-info">
             <div class="label">Total Transaksi</div>
             <div class="value">{{ $totalTransaksi }}</div>
         </div>
     </div>
     <div class="stat-card warning">
-        <div class="stat-icon"><x-lucide-clock class="lucide-icon" /></div>
+        <div class="stat-icon"><svg class="lucide-icon"><use href="#i-clock"/></svg></div>
         <div class="stat-info">
             <div class="label">Menunggu Konfirmasi</div>
             <div class="value">{{ $transaksiPending }}</div>
@@ -39,7 +39,7 @@
 <div class="dashboard-row">
     <div class="card revenue-card">
         <div class="card-header">
-            <h3 class="card-title"><x-lucide-wallet class="lucide-icon-inline" /> Pendapatan Bulan Ini</h3>
+            <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-wallet"/></svg> Pendapatan Bulan Ini</h3>
         </div>
         <div class="revenue-content">
             <div class="revenue-amount">Rp {{ number_format($revenueMonth, 0, ',', '.') }}</div>
@@ -50,7 +50,7 @@
     </div>
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title"><x-lucide-bar-chart-3 class="lucide-icon-inline" /> Status Transaksi</h3>
+            <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-bar-chart-3"/></svg> Status Transaksi</h3>
         </div>
         <div class="status-bars">
             <div class="status-bar-item">
@@ -96,7 +96,7 @@
 <div class="dashboard-row">
     <div class="card chart-card">
         <div class="card-header">
-            <h3 class="card-title"><x-lucide-trending-up class="lucide-icon-inline" /> Pendapatan 6 Bulan Terakhir</h3>
+            <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-trending-up"/></svg> Pendapatan 6 Bulan Terakhir</h3>
         </div>
         <div class="chart-container">
             <canvas id="revenueChart"></canvas>
@@ -104,7 +104,7 @@
     </div>
     <div class="card chart-card">
         <div class="card-header">
-            <h3 class="card-title"><x-lucide-calendar class="lucide-icon-inline" /> Booking 7 Hari Terakhir</h3>
+            <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-calendar"/></svg> Booking 7 Hari Terakhir</h3>
         </div>
         <div class="chart-container">
             <canvas id="bookingsChart"></canvas>
@@ -116,7 +116,7 @@
 <div class="dashboard-row">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title"><x-lucide-log-in class="lucide-icon-inline" /> Check-in Hari Ini</h3>
+            <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-log-in"/></svg> Check-in Hari Ini</h3>
             <span class="badge badge-info">{{ count($todayCheckIns) }}</span>
         </div>
         @if(count($todayCheckIns) > 0)
@@ -137,7 +137,7 @@
     </div>
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title"><x-lucide-log-out class="lucide-icon-inline" /> Check-out Hari Ini</h3>
+            <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-log-out"/></svg> Check-out Hari Ini</h3>
             <span class="badge badge-warning">{{ count($todayCheckOuts) }}</span>
         </div>
         @if(count($todayCheckOuts) > 0)
@@ -162,7 +162,7 @@
 <div class="dashboard-row">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title"><x-lucide-calendar-days class="lucide-icon-inline" /> Reservasi Mendatang</h3>
+            <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-calendar-days"/></svg> Reservasi Mendatang</h3>
             <a href="/admin/transaksi" class="btn btn-sm btn-secondary">Lihat Semua</a>
         </div>
         @if(count($upcomingReservations) > 0)
@@ -194,7 +194,7 @@
     </div>
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title"><x-lucide-clock class="lucide-icon-inline" /> Transaksi Terbaru</h3>
+            <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-clock"/></svg> Transaksi Terbaru</h3>
             <a href="/admin/transaksi" class="btn btn-sm btn-secondary">Lihat Semua</a>
         </div>
         <div class="table-container">
@@ -229,7 +229,7 @@
 <!-- Room Types -->
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title"><x-lucide-bed-double class="lucide-icon-inline" /> Distribusi Tipe Kamar</h3>
+        <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-bed-double"/></svg> Distribusi Tipe Kamar</h3>
     </div>
     <div class="room-types-grid">
         @foreach($roomTypes as $type)

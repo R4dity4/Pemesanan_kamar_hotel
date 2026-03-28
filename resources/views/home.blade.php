@@ -54,7 +54,7 @@
             <h3>Reservasi Cepat</h3>
             <p>Check-in: 14:00 WIB | Check-out: 12:00 WIB</p>
             <a href="{{ route('reservasi') }}" class="btn-reserve" style="text-decoration: none;">Buat Reservasi</a>
-            <a href="{{ route('reservasi.cek') }}" class="btn-outline" style="margin-left:12px; text-decoration: none; color:#fff !important; border-color:#fff !important;">Cek Status</a>
+            <a href="#section-info" class="btn-outline" style="margin-left:12px; text-decoration: none; color:#fff !important; border-color:#fff !important;">Cek Status</a>
         </div>
     </div>
 </section>
@@ -70,22 +70,22 @@
     <div class="container">
         <div class="features-grid">
             <div class="feature-item">
-                <div class="feature-icon"><x-lucide-building class="lucide-icon-feature" /></div>
+                <div class="feature-icon"><svg class="lucide-icon-feature"><use href="#i-building"/></svg></div>
                 <h4>Kamar Premium</h4>
                 <p>Kamar dengan desain elegan dan fasilitas modern untuk kenyamanan maksimal.</p>
             </div>
             <div class="feature-item">
-                <div class="feature-icon"><x-lucide-utensils class="lucide-icon-feature" /></div>
+                <div class="feature-icon"><svg class="lucide-icon-feature"><use href="#i-utensils"/></svg></div>
                 <h4>Kuliner Berkelas</h4>
                 <p>Restoran dan cafe dengan menu internasional dan masakan lokal pilihan.</p>
             </div>
             <div class="feature-item">
-                <div class="feature-icon"><x-lucide-sparkles class="lucide-icon-feature" /></div>
+                <div class="feature-icon"><svg class="lucide-icon-feature"><use href="#i-sparkles"/></svg></div>
                 <h4>Spa & Wellness</h4>
                 <p>Perawatan tubuh dan pikiran dengan terapis profesional bersertifikat.</p>
             </div>
             <div class="feature-item">
-                <div class="feature-icon"><x-lucide-waves class="lucide-icon-feature" /></div>
+                <div class="feature-icon"><svg class="lucide-icon-feature"><use href="#i-waves"/></svg></div>
                 <h4>Kolam & Gym</h4>
                 <p>Fasilitas olahraga lengkap untuk menjaga kebugaran selama menginap.</p>
             </div>
@@ -93,26 +93,25 @@
     </div>
 </section>
 
-<section class="section-info">
+<section class="section-info" id="section-info">
     <div class="container info-inner">
         <div style="flex:1">
             <div class="info-card">
                 <h2>Pengalaman yang Anda Dapatkan</h2>
                 <p>Mulai dari sambutan hangat, sarapan ala chef, hingga layanan kebersihan harian. Kami menghadirkan pengalaman berkelas untuk setiap tamu.</p>
                 <ul>
-                    <li><x-lucide-check class="lucide-icon-check" /> Check-in cepat & layanan 24 jam</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Spa dan pusat kebugaran</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Tur & aktivitas lokal</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Restoran fine dining</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> WiFi gratis di seluruh area</li>
-                    <li><x-lucide-check class="lucide-icon-check" /> Parkir luas & aman</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Check-in cepat & layanan 24 jam</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Spa dan pusat kebugaran</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Tur & aktivitas lokal</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Restoran fine dining</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> WiFi gratis di seluruh area</li>
+                    <li><svg class="lucide-icon-check"><use href="#i-check"/></svg> Parkir luas & aman</li>
                 </ul>
                 <a class="btn-outline" href="{{ route('fasilitas') }}" style="margin-top:20px">Lihat Fasilitas</a>
             </div>
         </div>
         <div style="flex:1">
             <div class="info-card highlight-card">
-                <span class="promo-badge"><x-lucide-search class="lucide-icon-check" style="width:14px; height:14px; margin-right:4px;" /> STATUS</span>
                 <h4>Cek Status Pesanan</h4>
                 <p>Masukkan nomor KTP yang digunakan saat reservasi untuk melihat status pemesanan Anda.</p>
                 <form action="{{ route('reservasi.cek') }}" method="GET" style="margin-top: 20px;">
@@ -123,7 +122,7 @@
                             required>
                     </div>
                     <button type="submit" class="btn-reserve" style="width: 100%; border: none; cursor: pointer;">
-                        <x-lucide-search style="width:16px; height:16px; margin-right:8px; vertical-align: middle;" /> Cek Status Sekarang
+                        <svg style="width:16px; height:16px; margin-right:8px; vertical-align: middle;"><use href="#i-search"/></svg> Cek Status Sekarang
                     </button>
                 </form>
             </div>

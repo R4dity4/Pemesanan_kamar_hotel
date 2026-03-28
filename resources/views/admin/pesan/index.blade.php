@@ -6,21 +6,21 @@
 <!-- Stats -->
 <div class="stats-grid-3">
     <div class="stat-mini">
-        <span class="stat-icon"><x-lucide-mail class="lucide-icon" /></span>
+        <span class="stat-icon"><svg class="lucide-icon"><use href="#i-mail"/></svg></span>
         <div class="stat-data">
             <div class="stat-number">{{ $stats['total'] }}</div>
             <div class="stat-label">Total Pesan</div>
         </div>
     </div>
     <div class="stat-mini warning">
-        <span class="stat-icon"><x-lucide-bell class="lucide-icon" /></span>
+        <span class="stat-icon"><svg class="lucide-icon"><use href="#i-bell"/></svg></span>
         <div class="stat-data">
             <div class="stat-number">{{ $stats['belum_dibaca'] }}</div>
             <div class="stat-label">Belum Dibaca</div>
         </div>
     </div>
     <div class="stat-mini success">
-        <span class="stat-icon"><x-lucide-check class="lucide-icon" /></span>
+        <span class="stat-icon"><svg class="lucide-icon"><use href="#i-check"/></svg></span>
         <div class="stat-data">
             <div class="stat-number">{{ $stats['sudah_dibaca'] }}</div>
             <div class="stat-label">Sudah Dibaca</div>
@@ -56,7 +56,7 @@
                 <input type="text" name="search" class="form-control" placeholder="Nama / email / pesan" value="{{ request('search') }}">
             </div>
             <div class="filter-actions">
-                <button type="submit" class="btn btn-primary"><x-lucide-search class="lucide-icon-btn" /> Filter</button>
+                <button type="submit" class="btn btn-primary"><svg class="lucide-icon-btn"><use href="#i-search"/></svg> Filter</button>
                 <a href="/admin/pesan" class="btn btn-secondary">Reset</a>
             </div>
         </div>
@@ -65,18 +65,18 @@
 
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title"><x-lucide-mail class="lucide-icon-inline" /> Pesan Masuk</h3>
+        <h3 class="card-title"><svg class="lucide-icon-inline"><use href="#i-mail"/></svg> Pesan Masuk</h3>
         @if($stats['belum_dibaca'] > 0)
         <form action="/admin/pesan/mark-all-read" method="POST" style="display:inline">
             @csrf
-            <button type="submit" class="btn btn-sm btn-secondary"><x-lucide-check-check class="lucide-icon-btn" /> Tandai Semua Dibaca</button>
+            <button type="submit" class="btn btn-sm btn-secondary"><svg class="lucide-icon-btn"><use href="#i-check-check"/></svg> Tandai Semua Dibaca</button>
         </form>
         @endif
     </div>
 
     @if(session('success'))
     <div class="alert alert-success" style="margin:16px; background:#d4edda; color:#155724; padding:12px 16px; border-radius:8px">
-        <x-lucide-check class="lucide-icon-btn" /> {{ session('success') }}
+        <svg class="lucide-icon-btn"><use href="#i-check"/></svg> {{ session('success') }}
     </div>
     @endif
 

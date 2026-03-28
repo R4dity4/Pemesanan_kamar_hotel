@@ -3,11 +3,11 @@
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
             <span class="page-link disabled">
-                <x-lucide-chevron-left class="lucide-icon-inline" /> Sebelumnya
+                <svg class="lucide-icon-inline"><use href="#i-chevron-left"/></svg> Sebelumnya
             </span>
         @else
             <a href="{{ $paginator->previousPageUrl() }}" class="page-link">
-                <x-lucide-chevron-left class="lucide-icon-inline" /> Sebelumnya
+                <svg class="lucide-icon-inline"><use href="#i-chevron-left"/></svg> Sebelumnya
             </a>
         @endif
 
@@ -33,11 +33,11 @@
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
             <a href="{{ $paginator->nextPageUrl() }}" class="page-link">
-                Selanjutnya <x-lucide-chevron-right class="lucide-icon-inline" />
+                Selanjutnya <svg class="lucide-icon-inline"><use href="#i-chevron-right"/></svg>
             </a>
         @else
             <span class="page-link disabled">
-                Selanjutnya <x-lucide-chevron-right class="lucide-icon-inline" />
+                Selanjutnya <svg class="lucide-icon-inline"><use href="#i-chevron-right"/></svg>
             </span>
         @endif
     </nav>
