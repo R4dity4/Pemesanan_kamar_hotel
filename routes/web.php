@@ -85,8 +85,10 @@ Route::middleware(['karyawan'])->prefix('admin')->group(function () {
     Route::get('/transaksi/{no_transaksi}', [TransaksiAdminController::class, 'show'])->name('admin.transaksi.show');
     Route::post('/transaksi/{no_transaksi}/konfirmasi', [TransaksiAdminController::class, 'konfirmasiPesanan'])->name('admin.transaksi.konfirmasi');
     Route::post('/transaksi/{no_transaksi}/bayar', [TransaksiAdminController::class, 'konfirmasiPembayaran'])->name('admin.transaksi.bayar');
+    Route::post('/transaksi/{no_transaksi}/tolak-bukti', [TransaksiAdminController::class, 'tolakBukti'])->name('admin.transaksi.tolakBukti');
     Route::post('/transaksi/{no_transaksi}/selesai', [TransaksiAdminController::class, 'selesai'])->name('admin.transaksi.selesai');
     Route::post('/transaksi/{no_transaksi}/batal', [TransaksiAdminController::class, 'batal'])->name('admin.transaksi.batal');
+    Route::put('/transaksi/{no_transaksi}/update-detail', [TransaksiAdminController::class, 'updateDetail'])->name('admin.transaksi.update-detail');
 
     // Kelola Pesan
     Route::get('/pesan', [PesanAdminController::class, 'index'])->name('admin.pesan.index');

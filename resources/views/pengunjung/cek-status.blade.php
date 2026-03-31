@@ -206,7 +206,23 @@
         @if($transaksi->status == 'dikonfirmasi')
         <div class="info-card" style="margin-top:24px; height:auto; background:#e7f3ff; border:2px solid #17a2b8">
             <h4 style="color:#17a2b8"><svg class="lucide-icon-inline"><use href="#i-upload"/></svg> Upload Bukti Pembayaran</h4>
-            <p style="color:#666; margin-top:8px">Pesanan Anda telah dikonfirmasi. Silakan lakukan pembayaran dan upload bukti transfer.</p>
+
+            @if($transaksi->bukti_bayar)
+                <p style="color:#666; margin-top:8px">Bukti pembayaran Anda sedang <strong>menunggu verifikasi Admin</strong>. Jika tidak kunjung diproses atau ternyata salah gambar, Anda dapat mengupload ulang di bawah ini.</p>
+                <div style="margin: 16px 0;">
+                    <a href="{{ asset('storage/' . $transaksi->bukti_bayar) }}" target="_blank">
+                        <img src="{{ asset('storage/' . $transaksi->bukti_bayar) }}" style="max-width:100%; height:auto; border-radius:6px; border:1px solid #17a2b8;">
+                    </a>
+                </div>
+            @endif
+
+            @if(session('error'))
+                <div style="background:#f8d7da; padding:12px; border-radius:6px; margin-top:12px; color:#721c24; border:1px solid #f5c6cb;">
+                    {{ session('error') }}
+                </div>
+            @elseif(!$transaksi->bukti_bayar)
+                <p style="color:#666; margin-top:8px">Pesanan Anda telah dikonfirmasi. Silakan lakukan pembayaran dan upload bukti transfer.</p>
+            @endif
 
             <div style="background:var(--white); padding:20px; border-radius:8px; margin-top:16px; text-align:center">
                 <p style="margin:0 0 4px; color:#666; font-size:13px">Transfer ke Rekening</p>
